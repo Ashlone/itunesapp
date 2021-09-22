@@ -1,0 +1,302 @@
+/* Set the size (height x width), text alignment and background and text colour of the application. */
+#App,
+#root,
+body {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+/* --- Header --- */
+/* Set for the header to display as a grid, set the frames, the position to absolute and aligned it to the top-left corner and set the z-index 
+to 1 so that the header appears over the search container. Also set the size (height x width), the padding, the background colour and the font 
+size and colour. */
+#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  font-size: calc(10px + 2vmin);
+  background-color: transparent;
+  color: #ffffff;
+  z-index: 1 !important;
+}
+
+/* Set for the logo's column to take up the entire available space, taking into account the navigation bar (left margin set to auto). */
+#header:nth-child(1) {
+  grid-column-start: 2;
+}
+#header:nth-child(2) {
+  margin-left: auto;
+}
+
+/* Adjusted the size (height x width) and set for the logo to float to the left. */
+#logo {
+  height: 80px;
+  width: auto;
+  float: left;
+}
+
+/* --- Navigation bar --- */
+/* Set for the navigation container to float to the right. */
+.navbar {
+  float: right;
+}
+
+/* Set the width. top padding and font colour and size of the navigation links. */
+.nav-link {
+  width: 160px;
+  padding-top: 17px !important;
+  font-size: 1.3rem;
+  color: #ffffff !important;
+}
+
+/* --- Search --- */
+/* Set the position of the search container to relative, altered the left position and transformed it to be centered on the x (horizontal 
+axis. Also set the size (height x width) and the margins. */
+#searchcontainer {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: 1250px;
+  margin: -20px 0px 0px;
+}
+
+/* Set the search contents' size (height x width), margins, top padding, added a background image and set the background colour. */
+#searchcontent {
+  height: 600px;
+  width: auto;
+  margin: auto;
+  padding-top: 295px;
+  background-color: #000000;
+}
+
+/* Set the search button, dropdown and input section's height. Also added a border (styled, sized, coloured and radius set). */
+#searchinput,
+#searchbutton {
+  height: 40px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+/* Set for the search input container to display as flex and the direction to row. Also set the size (height x width), the margins, the 
+background colour and the padding of the search input area. */
+#searchinput {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 600px;
+  margin: 0px auto 15px;
+  padding: 8px;
+  background-color: white;
+}
+
+/* Set for the input area to take up all of the available space by setting flex-grow, set the left-side padding and removed the border and 
+background colour. */
+input {
+  background-color: transparent;
+  border: none;
+  flex-grow: 2;
+  padding-left: 5px;
+}
+
+/* Removing the input focus blue box by setting outline to none.*/
+input:focus {
+  outline: none;
+}
+
+/* Set the font weight, colour and opacity of the input section's placeholder text. */
+::placeholder {
+  font-weight: 650;
+  color: #272727;
+  opacity: 1;
+}
+
+/* Set the search button's size (height x width), top margin and removed the border and background colour. */
+#searchbutton {
+  height: auto;
+  width: auto;
+  margin-top: -15px;
+  background-color: transparent;
+  border: none;
+}
+
+/* --- Dropdown Menu ---*/
+/* Set the width and the background colour of the dropdown menu button and options. */
+.dropdown-menu,
+.btn-md {
+  width: 125px;
+  background-color: #0000008e !important;
+}
+
+/* Set the font size and colour of the dropdown options. */
+.dropdown-item {
+  font-size: 0.8rem;
+  color: #ffffff !important;
+}
+
+/* Set the highlight background colour for when the options are hovered over. */
+.dropdown-item:hover {
+  background-color: #5120569d !important;
+}
+
+/* --- Cards --- */
+/* Set the size (height x width), padding, background colour and opacity of the cards. Added a gradient overlay (styled, coloured, percentages
+set and degree stipulated. Also added a border (styled, coloured, sized and border radius adjusted. */
+.card {
+  height: 470px;
+  width: 100%;
+  padding: 15px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #414141 0%, #000000 74%);
+  border: 1px solid #000000;
+  border-radius: 10px !important;
+  opacity: 0.8;
+}
+
+/* Set the card footer's padding to 0. */
+.card-footer {
+  padding: 0px !important;
+}
+
+/* Set the audio preview button's margins and padding. */
+#previewbutton {
+  margin: auto auto 10px;
+  padding: 3px 0px 0px;
+}
+
+/* Set the audio's size (height x width). */
+audio {
+  height: 35px;
+  width: 235px;
+}
+
+/* Set the cards' button background colour and added a border (styled, sized and coloured). */
+.cardfuncbutton {
+  background-color: #303030 !important;
+  border: 1px solid #414040 !important;
+}
+
+/* Set the "Add Fav" button's font size and padding. */
+#addfavbutton {
+  font-size: 0.91rem;
+  padding: 7.5px;
+}
+
+/* Set for the "Add Fav" button's border colour to change once hovered over. */
+#addfavbutton:hover {
+  border: 1px solid #ff2589 !important;
+}
+
+/* Set for the "More Info" button's border colour to change once hovered over. */
+.infobutton:hover {
+  border: 1px solid #237acd !important;
+}
+
+/* Set for the "Delete" button's border colour to change once hovered over. */
+#deletebutton:hover {
+  border: 1px solid #ff5e50 !important;
+}
+
+/* --- Results --- */
+/* Set the top margin of the result container. */
+#resultcontainer {
+  margin-top: 30px !important;
+}
+
+/* --- Favourites --- */
+/* Set the position of the favourite container to relative, altered the left position and transformed it to be centered on the x (horizontal 
+axis. Also set the size (height x width) and the margins. */
+#favouritecontainer {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: 1250px;
+  margin: 0px;
+}
+
+/* Set the top padding and the bottom margin of the favourite's heading. */
+h3 {
+  padding-top: 95px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Set the alert modal's text colour of the title. */
+.swal2-title {
+  color: #ffffff !important;
+}
+
+/* --- Footer --- */
+/* Set the size (height x width), the background colour and padding of the footer. */
+#footer {
+  height: 55px;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent !important;
+}
+
+/* Set the font colour and the margins of the footer's header text. */
+h6 {
+  margin: 0px auto !important;
+  color: #ffffff;
+}
+
+/* Set the margins, the font colour and the text decoration to none for the footer link. */
+a {
+  margin: auto 6px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* --- Icons --- */
+/* Set the font size of the fa-search search icon. */
+.fa-search {
+  font-size: 1.15rem;
+  margin-left: 8px;
+}
+
+/* Set for the font colour and the cursor to change once the fa-search search icon is hovered over. */
+.fa-search:hover {
+  color: #e244b0;
+  cursor: pointer;
+}
+
+/* Set the margins of the icons. */
+.fa-home,
+.fa-star,
+.fa-apple,
+.fa-trash-alt {
+  margin-right: 5px;
+}
+
+/* Overridden the bottom and right margins and font size of the "Add Fav" button's star icon. */
+#resultcontainer button .fa-star {
+  margin-bottom: 1px !important;
+  margin-right: 4px;
+  font-size: 0.8rem;
+}
+
+/* Set the font colour of the footer's heart icon. */
+.fa-heart {
+  color: #512056;
+}
+
+/* Set the bottom margin, the font size of the "Scroll to Top" icon and for the cursor to change once the icon is hovered over. */
+.fa-angle-double-up {
+  margin-bottom: 12px !important;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+/* Set the font colour of the footer's "Scroll to Top" icon. */
+.fa-angle-double-up:hover {
+  color: #512056;
+}
